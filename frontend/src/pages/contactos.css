@@ -1,0 +1,617 @@
+/* =========================================
+   CONTENEDOR PRINCIPAL
+   ========================================= */
+
+.contactos-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+
+/* =========================================
+   CABECERA
+   ========================================= */
+
+.contactos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.contactos-header h1 {
+  margin: 0 0 8px 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.contactos-header p {
+  margin: 0;
+  color: #cbd5e1;
+  font-size: 15px;
+}
+
+.contactos-count {
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+  );
+
+  color: #ffffff;
+
+  padding: 10px 17px;
+
+  border-radius: 20px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  box-shadow:
+    0 4px 10px rgba(37, 99, 235, 0.20);
+}
+
+
+/* =========================================
+   BOTÓN NUEVO CONTACTO
+   ========================================= */
+
+.nuevo-contacto-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 25px;
+}
+
+.btn-nuevo-contacto {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 12px 20px;
+
+  border: 1px solid rgba(96, 165, 250, 0.35);
+  border-radius: 10px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+  );
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 12px rgba(37, 99, 235, 0.25);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.btn-nuevo-contacto:hover {
+  background: linear-gradient(
+    135deg,
+    #3b82f6,
+    #2563eb
+  );
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 20px rgba(37, 99, 235, 0.40);
+}
+
+.btn-nuevo-contacto:active {
+  transform: translateY(0);
+
+  box-shadow:
+    0 3px 8px rgba(37, 99, 235, 0.25);
+}
+
+.btn-nuevo-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 24px;
+  height: 24px;
+
+  border-radius: 50%;
+
+  background-color: rgba(255, 255, 255, 0.18);
+
+  font-size: 19px;
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+.btn-crear-vacio {
+  margin-top: 25px;
+}
+
+
+/* =========================================
+   MENSAJES
+   ========================================= */
+
+.mensaje-error {
+  background-color: #451a1a;
+
+  color: #fecaca;
+
+  border: 1px solid #991b1b;
+
+  padding: 15px 20px;
+
+  border-radius: 8px;
+
+  margin-bottom: 20px;
+
+  font-size: 15px;
+}
+
+.mensaje-exito {
+  background-color: #064e3b;
+
+  color: #a7f3d0;
+
+  border: 1px solid #047857;
+
+  padding: 15px 20px;
+
+  border-radius: 8px;
+
+  margin-bottom: 20px;
+
+  font-size: 15px;
+}
+
+
+/* =========================================
+   CONTENEDOR DE LA TABLA
+   ========================================= */
+
+.tabla-container {
+  width: 100%;
+
+  overflow-x: auto;
+
+  background-color: #1e293b;
+
+  border-radius: 12px;
+
+  border: 1px solid #475569;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================
+   TABLA
+   ========================================= */
+
+.contactos-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 1000px;
+}
+
+
+/* =========================================
+   CABECERA DE LA TABLA
+   ========================================= */
+
+.contactos-table thead {
+  background-color: #334155;
+}
+
+.contactos-table th {
+  padding: 16px 18px;
+
+  text-align: left;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  color: #ffffff;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.4px;
+
+  border-bottom: 2px solid #64748b;
+}
+
+
+/* =========================================
+   FILAS
+   ========================================= */
+
+.contactos-table tbody tr {
+  transition:
+    background-color 0.2s ease;
+}
+
+.contactos-table tbody tr:hover {
+  background-color: #334155;
+}
+
+.contactos-table td {
+  padding: 17px 18px;
+
+  border-bottom: 1px solid #475569;
+
+  color: #f1f5f9;
+
+  font-size: 14px;
+
+  white-space: nowrap;
+}
+
+.contactos-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =========================================
+   NOMBRE
+   ========================================= */
+
+.nombre-contacto {
+  font-weight: 700;
+
+  color: #ffffff !important;
+
+  font-size: 15px !important;
+}
+
+
+/* =========================================
+   EMAIL
+   ========================================= */
+
+.email {
+  color: #93c5fd !important;
+}
+
+
+/* =========================================
+   CATEGORÍA
+   ========================================= */
+
+.categoria {
+  display: inline-block;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  background-color: #1d4ed8;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   ACCIONES
+   ========================================= */
+
+.acciones {
+  display: flex;
+
+  gap: 8px;
+}
+
+.acciones button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 5px;
+
+  border: none;
+
+  padding: 8px 13px;
+
+  border-radius: 7px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* =========================================
+   BOTÓN EDITAR
+   ========================================= */
+
+.btn-editar {
+  background-color: #0284c7;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 3px 8px rgba(2, 132, 199, 0.20);
+}
+
+.btn-editar:hover {
+  background-color: #0369a1;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 12px rgba(2, 132, 199, 0.30);
+}
+
+
+/* =========================================
+   BOTÓN ELIMINAR
+   ========================================= */
+
+.btn-eliminar {
+  background-color: #dc2626;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 3px 8px rgba(220, 38, 38, 0.20);
+}
+
+.btn-eliminar:hover {
+  background-color: #b91c1c;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 12px rgba(220, 38, 38, 0.30);
+}
+
+
+/* =========================================
+   SIN CONTACTOS
+   ========================================= */
+
+.sin-contactos {
+  text-align: center;
+
+  background-color: #1e293b;
+
+  border: 1px solid #475569;
+
+  border-radius: 12px;
+
+  padding: 60px 20px;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.sin-contactos-icono {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 58px;
+
+  height: 58px;
+
+  margin: 0 auto 20px;
+
+  border-radius: 50%;
+
+  background-color: #334155;
+
+  font-size: 27px;
+}
+
+.sin-contactos h2 {
+  margin: 0 0 10px;
+
+  color: #ffffff;
+
+  font-size: 26px;
+}
+
+.sin-contactos p {
+  margin: 0;
+
+  color: #cbd5e1;
+
+  font-size: 16px;
+}
+
+.nuevo-contacto-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 25px;
+}
+
+.btn-nuevo-contacto {
+  padding: 11px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 3px 10px rgba(37, 99, 235, 0.25);
+}
+
+.btn-nuevo-contacto:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(37, 99, 235, 0.35);
+}
+
+.btn-nuevo-contacto:active {
+  transform: translateY(0);
+}
+
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  .contactos-container {
+    padding: 30px 20px;
+  }
+
+  .contactos-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .contactos-header h1 {
+    font-size: 30px;
+  }
+
+  .contactos-header p {
+    font-size: 14px;
+  }
+
+  .contactos-count {
+    align-self: flex-start;
+  }
+
+  .nuevo-contacto-wrapper {
+    justify-content: flex-start;
+  }
+
+  .btn-nuevo-contacto {
+    padding: 11px 17px;
+
+    font-size: 14px;
+  }
+
+  .tabla-container {
+    border-radius: 10px;
+
+    overflow-x: auto;
+  }
+
+  .contactos-table {
+    min-width: 1000px;
+  }
+
+  .contactos-table th {
+    padding: 14px 16px;
+
+    font-size: 12px;
+  }
+
+  .contactos-table td {
+    padding: 15px 16px;
+
+    font-size: 13px;
+  }
+
+  .acciones {
+    gap: 6px;
+  }
+
+  .acciones button {
+    padding: 8px 11px;
+
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================
+   MÓVIL PEQUEÑO
+   ========================================= */
+
+@media (max-width: 480px) {
+
+  .contactos-container {
+    padding: 25px 15px;
+  }
+
+  .contactos-header h1 {
+    font-size: 27px;
+  }
+
+  .contactos-header p {
+    font-size: 14px;
+  }
+
+  .contactos-count {
+    padding: 9px 14px;
+
+    font-size: 13px;
+  }
+
+  .nuevo-contacto-wrapper {
+    justify-content: stretch;
+  }
+
+  .btn-nuevo-contacto {
+    width: 100%;
+  }
+
+  .tabla-container {
+    border-radius: 8px;
+  }
+
+  .contactos-table {
+    min-width: 950px;
+  }
+
+  .contactos-table th {
+    padding: 13px 14px;
+
+    font-size: 11px;
+  }
+
+  .contactos-table td {
+    padding: 14px;
+
+    font-size: 13px;
+  }
+
+  .acciones button {
+    padding: 7px 10px;
+
+    font-size: 12px;
+  }
+}

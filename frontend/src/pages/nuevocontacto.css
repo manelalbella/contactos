@@ -1,0 +1,326 @@
+/* =========================================
+   PÁGINA NUEVO CONTACTO
+   ========================================= */
+
+.nuevo-contacto-container {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 50px 40px;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+
+/* =========================================
+   CABECERA
+   ========================================= */
+
+.nuevo-contacto-header {
+  margin-bottom: 32px;
+}
+
+.nuevo-contacto-header h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+}
+
+.nuevo-contacto-header p {
+  margin: 10px 0 0;
+  color: #94a3b8;
+  font-size: 16px;
+}
+
+
+/* =========================================
+   MENSAJES
+   ========================================= */
+
+.mensaje-exito,
+.mensaje-error {
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.mensaje-exito {
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  color: #86efac;
+}
+
+.mensaje-error {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  color: #fca5a5;
+}
+
+
+/* =========================================
+   TARJETA DEL FORMULARIO
+   ========================================= */
+
+.nuevo-contacto-form {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 38px;
+
+  background: #111827;
+
+  border: 1px solid #273449;
+  border-radius: 16px;
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.25),
+    0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   FILAS
+   ========================================= */
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+
+/* =========================================
+   GRUPOS
+   ========================================= */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+
+/* =========================================
+   LABELS
+   ========================================= */
+
+.form-group label {
+  margin-bottom: 9px;
+
+  color: #e2e8f0;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   INPUTS
+   ========================================= */
+
+.form-group input {
+  width: 100%;
+  height: 48px;
+
+  padding: 0 15px;
+
+  box-sizing: border-box;
+
+  background: #0b1220;
+
+  border: 1px solid #334155;
+  border-radius: 9px;
+
+  color: #f8fafc;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+/* =========================================
+   PLACEHOLDER
+   ========================================= */
+
+.form-group input::placeholder {
+  color: #64748b;
+}
+
+
+/* =========================================
+   INPUT HOVER
+   ========================================= */
+
+.form-group input:hover {
+  border-color: #475569;
+}
+
+
+/* =========================================
+   INPUT FOCUS
+   ========================================= */
+
+.form-group input:focus {
+  background: #0f172a;
+
+  border-color: #3b82f6;
+
+  box-shadow:
+    0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+
+/* =========================================
+   SEPARACIÓN ANTES DE LOS BOTONES
+   ========================================= */
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 10px;
+  padding-top: 28px;
+
+  border-top: 1px solid #273449;
+}
+
+
+/* =========================================
+   TODOS LOS BOTONES
+   ========================================= */
+
+.form-actions button {
+  height: 45px;
+
+  padding: 0 20px;
+
+  border: none;
+  border-radius: 8px;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* =========================================
+   BOTÓN CANCELAR
+   ========================================= */
+
+.btn-cancelar {
+  background: #1e293b;
+  color: #cbd5e1;
+
+  border: 1px solid #334155 !important;
+}
+
+.btn-cancelar:hover {
+  background: #273449;
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   BOTÓN GUARDAR
+   ========================================= */
+
+.btn-guardar {
+  background: #2563eb;
+  color: #ffffff;
+
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.20);
+}
+
+.btn-guardar:hover {
+  background: #1d4ed8;
+
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.28);
+
+  transform: translateY(-1px);
+}
+
+.btn-guardar:active,
+.btn-cancelar:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  .nuevo-contacto-container {
+    padding: 30px 20px;
+  }
+
+  .nuevo-contacto-header h1 {
+    font-size: 30px;
+  }
+
+  .nuevo-contacto-form {
+    padding: 25px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .form-actions button {
+    width: 100%;
+  }
+}
+
+
+/* =========================================
+   MÓVIL PEQUEÑO
+   ========================================= */
+
+@media (max-width: 480px) {
+
+  .nuevo-contacto-container {
+    padding: 25px 15px;
+  }
+
+  .nuevo-contacto-header h1 {
+    font-size: 27px;
+  }
+
+  .nuevo-contacto-header p {
+    font-size: 14px;
+  }
+
+  .nuevo-contacto-form {
+    padding: 20px;
+    border-radius: 12px;
+  }
+}
